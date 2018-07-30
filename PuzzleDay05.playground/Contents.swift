@@ -1,3 +1,9 @@
-import UIKit
+import Foundation
+import PlaygroundSupport
 
-print(loadTextFromFile(isSampleFile: true))
+
+PlaygroundPage.current.needsIndefiniteExecution = true
+findSteps(queue: .global(qos: .utility), isSecondPart: true) {
+    print("updated list : \($0) and total steps taken : \($1)")
+    PlaygroundPage.current.finishExecution()
+}
